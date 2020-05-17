@@ -9,9 +9,28 @@
     <managingEditor>xialiaoliao0911@gmail.com (Gavin Stone)</managingEditor>
     <webMaster>xialiaoliao0911@gmail.com (Gavin Stone)</webMaster>
     <copyright>(c) 2020 Gavin Stone.</copyright>
+    <lastBuildDate>Tue, 12 May 2020 23:49:31 +0800</lastBuildDate>
     
 	<atom:link href="http://troub1emaker0911.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>First</title>
+      <link>http://troub1emaker0911.github.io/2020/05/12/first/</link>
+      <pubDate>Tue, 12 May 2020 23:51:02 +0800</pubDate>
+      <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
+      <guid>http://troub1emaker0911.github.io/2020/05/12/first/</guid>
+      <description>Hello Hugo  aaa bbb ccc  </description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://troub1emaker0911.github.io/about/</link>
+      <pubDate>Tue, 12 May 2020 23:49:31 +0800</pubDate>
+      <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
+      <guid>http://troub1emaker0911.github.io/about/</guid>
+      <description>欢迎访问我的博客！  My Blog Address https://troub1emaker0911.github.io/ Email xialiaoliao0911@gmail.com Github https://github.com/troub1emaker0911  </description>
+    </item>
     
   </channel>
 </rss>
