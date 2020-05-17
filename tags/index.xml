@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Gavin Stone&#39;s Blog</title>
+    <link>http://troub1emaker0911.github.io/tags/</link>
+    <description>Recent content in Tags on Gavin Stone&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>xialiaoliao0911@gmail.com (Gavin Stone)</managingEditor>
+    <webMaster>xialiaoliao0911@gmail.com (Gavin Stone)</webMaster>
+    <copyright>(c) 2020 Gavin Stone.</copyright>
+    
+	<atom:link href="http://troub1emaker0911.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
