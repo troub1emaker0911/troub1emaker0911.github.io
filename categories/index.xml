@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Gavin Stone&#39;s Blog</title>
-    <link>http://troub1emaker0911.github.io/categories/</link>
+    <link>https://troub1emaker0911.github.io/categories/</link>
     <description>Recent content in Categories on Gavin Stone&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
@@ -11,24 +11,24 @@
     <copyright>(c) 2020 Gavin Stone.</copyright>
     <lastBuildDate>Sun, 17 May 2020 23:38:34 +0800</lastBuildDate>
     
-	<atom:link href="http://troub1emaker0911.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://troub1emaker0911.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>容器编排技术</title>
-      <link>http://troub1emaker0911.github.io/categories/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E6%8A%80%E6%9C%AF/</link>
+      <link>https://troub1emaker0911.github.io/categories/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E6%8A%80%E6%9C%AF/</link>
       <pubDate>Sun, 17 May 2020 23:38:34 +0800</pubDate>
       <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
-      <guid>http://troub1emaker0911.github.io/categories/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E6%8A%80%E6%9C%AF/</guid>
+      <guid>https://troub1emaker0911.github.io/categories/%E5%AE%B9%E5%99%A8%E7%BC%96%E6%8E%92%E6%8A%80%E6%9C%AF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>杂技浅尝</title>
-      <link>http://troub1emaker0911.github.io/categories/%E6%9D%82%E6%8A%80%E6%B5%85%E5%B0%9D/</link>
+      <link>https://troub1emaker0911.github.io/categories/%E6%9D%82%E6%8A%80%E6%B5%85%E5%B0%9D/</link>
       <pubDate>Sun, 17 May 2020 19:02:00 +0800</pubDate>
       <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
-      <guid>http://troub1emaker0911.github.io/categories/%E6%9D%82%E6%8A%80%E6%B5%85%E5%B0%9D/</guid>
+      <guid>https://troub1emaker0911.github.io/categories/%E6%9D%82%E6%8A%80%E6%B5%85%E5%B0%9D/</guid>
       <description></description>
     </item>
     
