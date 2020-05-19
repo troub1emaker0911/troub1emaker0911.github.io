@@ -15,7 +15,7 @@
     
     
     <item>
-      <title>Links</title>
+      <title>相关链接</title>
       <link>http://troub1emaker0911.github.io/links/</link>
       <pubDate>Tue, 19 May 2020 15:26:43 +0800</pubDate>
       <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
@@ -30,6 +30,15 @@
       <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
       <guid>http://troub1emaker0911.github.io/project1/</guid>
       <description>This is a test file </description>
+    </item>
+    
+    <item>
+      <title>授权说明</title>
+      <link>http://troub1emaker0911.github.io/license/</link>
+      <pubDate>Tue, 19 May 2020 14:27:32 +0800</pubDate>
+      <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
+      <guid>http://troub1emaker0911.github.io/license/</guid>
+      <description> 本网站基于hugo构建； 本网站所有文章均由本人撰写，版权归Gavin Stone所有；  </description>
     </item>
     
     <item>
