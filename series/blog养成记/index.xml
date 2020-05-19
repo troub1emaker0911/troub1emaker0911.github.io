@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog养成记 on Gavin Stone&#39;s Blog</title>
+    <link>http://troub1emaker0911.github.io/series/blog%E5%85%BB%E6%88%90%E8%AE%B0/</link>
+    <description>Recent content in Blog养成记 on Gavin Stone&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>xialiaoliao0911@gmail.com (Gavin Stone)</managingEditor>
+    <webMaster>xialiaoliao0911@gmail.com (Gavin Stone)</webMaster>
+    <copyright>(c) 2020 Gavin Stone.</copyright>
+    <lastBuildDate>Sun, 17 May 2020 19:02:00 +0800</lastBuildDate>
+    
+	<atom:link href="http://troub1emaker0911.github.io/series/blog%E5%85%BB%E6%88%90%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何使用hugo搭建一个个人博客？</title>
+      <link>http://troub1emaker0911.github.io/2020/05/17/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sun, 17 May 2020 19:02:00 +0800</pubDate>
+      <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
+      <guid>http://troub1emaker0911.github.io/2020/05/17/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>1.下载二进制安装包文件
+Hugo二进制下载地址：https://github.com/spf13/hugo/releases
+2.解压安装包
+cd /usr/local mkdir hugo cd hugo tar -xf hugo_0.70.0_Linux-64bit.tar.gz 3.创建网站
+cd /usr/local/hugo ./hugo new site 然后hugo会自动生成这样一个目录结构：
+ ▸ archetypes/ ▸ content/ ▸ layouts/ ▸ static/ config.toml 4.下载主题
+$ cd /usr/local/hugo/site $ cd themes $ git clone https://github.com/enten/hyde-y 5.修改配置文件
+1)切换目录
+cd /usr/local/hugo/site 2)修改配置文件config.toml
+[root@gavin site]# more config.toml # hostname (and path) to the root eg. http://spf13.com/ baseurl = &amp;quot;http://www.example.com&amp;quot; # Site title title = &amp;quot;Gavin Stone&#39;s Blog&amp;quot; # Copyright copyright = &amp;quot;(c) 2020 Gavin Stone.</description>
+    </item>
+    
+  </channel>
+</rss>
