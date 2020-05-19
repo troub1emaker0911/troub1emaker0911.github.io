@@ -43,7 +43,7 @@ cd /usr/local/hugo/site 2)修改配置文件config.toml
     </item>
     
     <item>
-      <title>About</title>
+      <title>关于我</title>
       <link>http://troub1emaker0911.github.io/about/</link>
       <pubDate>Tue, 12 May 2020 23:49:31 +0800</pubDate>
       <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
