@@ -66,7 +66,7 @@ cd /usr/local/hugo ./hugo new site 然后hugo会自动生成这样一个目录�
 $ cd /usr/local/hugo/site $ cd themes $ git clone https://github.com/enten/hyde-y 5.修改配置文件
 1)切换目录
 cd /usr/local/hugo/site 2)修改配置文件config.toml
-[root@gavin site]# more config.toml # hostname (and path) to the root eg. http://spf13.com/ baseurl = &amp;quot;http://www.example.com&amp;quot; # Site title title = &amp;quot;Gavin Stone&#39;s Blog&amp;quot; # Copyright copyright = &amp;quot;(c) 2020 Gavin Stone.</description>
+[root@gavin site]# more config.toml # hostname (and path) to the root eg. http://spf13.com/ baseurl = &amp;quot;https://troub1emaker0911.github.io&amp;quot; # Site title title = &amp;quot;Gavin Stone&#39;s Blog&amp;quot; # Copyright copyright = &amp;quot;(c) 2020 Gavin Stone.</description>
     </item>
     
     <item>
