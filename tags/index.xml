@@ -9,10 +9,19 @@
     <managingEditor>xialiaoliao0911@gmail.com (Gavin Stone)</managingEditor>
     <webMaster>xialiaoliao0911@gmail.com (Gavin Stone)</webMaster>
     <copyright>(c) 2020 Gavin Stone.</copyright>
-    <lastBuildDate>Sun, 17 May 2020 23:38:34 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 23 May 2020 00:49:34 +0800</lastBuildDate>
     
 	<atom:link href="https://troub1emaker0911.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>index</title>
+      <link>https://troub1emaker0911.github.io/tags/index/</link>
+      <pubDate>Sat, 23 May 2020 00:49:34 +0800</pubDate>
+      <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
+      <guid>https://troub1emaker0911.github.io/tags/index/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>kubernetes</title>
