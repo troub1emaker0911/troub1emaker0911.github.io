@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zabbix on Gavin Stone&#39;s Blog</title>
+    <link>https://troub1emaker0911.github.io/tags/zabbix/</link>
+    <description>Recent content in zabbix on Gavin Stone&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <managingEditor>xialiaoliao0911@gmail.com (Gavin Stone)</managingEditor>
+    <webMaster>xialiaoliao0911@gmail.com (Gavin Stone)</webMaster>
+    <copyright>(c) 2020 Gavin Stone.</copyright>
+    <lastBuildDate>Sun, 17 May 2020 23:38:34 +0800</lastBuildDate>
+    
+	<atom:link href="https://troub1emaker0911.github.io/tags/zabbix/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>zabbix安装与配置</title>
+      <link>https://troub1emaker0911.github.io/2020/05/17/zabbix%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 17 May 2020 23:38:34 +0800</pubDate>
+      <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
+      <guid>https://troub1emaker0911.github.io/2020/05/17/zabbix%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</guid>
+      <description>一、安装Zabbix a.安装什么版本 标准版 长期支持版： LTS
+b.zabbix的安装 ​ 1.安装repo源
+rpm -ivh https://mirrors.tuna.tsinghua.edu.cn/zabbix/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-2.el7.noarch.rpm ​ 2.修改repo中的源为清华源后保存 ​ 将repo.zabbix.com修改为mirrors.tuna.tsinghua.edu.cn/zabbix
+​ 3.安装zabbix-server-mysql和zabbix-web-mysql
+​ yum -y install zabbix-server-mysql zabbix-web-mysql
+​ 4.安装配置数据库mariadb-server,导入初始数据
+yum -y install mariadb-server.x86_64 systemctl enable mariadb.service systemctl start mariadb.service ​ 1). 数据库安全初始化，这里我们不设置密码
+​ mysql_secure_installation
+​ 2).进入数据库进行设置，输入mysql进入数据库
+ mysql&amp;gt; create database zabbix character set utf8 collate utf8_bin; mysql&amp;gt; grant all on zabbix.* to zabbix@localhost identified	by &#39;123456&#39;; mysql&amp;gt; flush privileges; ​ 3).查询zabbix导入sql的目录
+ rpm -ql zabbix-server-mysql cd /usr/share/doc/zabbix-server-mysql-4.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -74,6 +74,25 @@ join
     </item>
     
     <item>
+      <title>zabbix安装与配置</title>
+      <link>https://troub1emaker0911.github.io/2020/05/17/zabbix%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Sun, 17 May 2020 23:38:34 +0800</pubDate>
+      <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
+      <guid>https://troub1emaker0911.github.io/2020/05/17/zabbix%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE/</guid>
+      <description>一、安装Zabbix a.安装什么版本 标准版 长期支持版： LTS
+b.zabbix的安装 ​ 1.安装repo源
+rpm -ivh https://mirrors.tuna.tsinghua.edu.cn/zabbix/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-2.el7.noarch.rpm ​ 2.修改repo中的源为清华源后保存 ​ 将repo.zabbix.com修改为mirrors.tuna.tsinghua.edu.cn/zabbix
+​ 3.安装zabbix-server-mysql和zabbix-web-mysql
+​ yum -y install zabbix-server-mysql zabbix-web-mysql
+​ 4.安装配置数据库mariadb-server,导入初始数据
+yum -y install mariadb-server.x86_64 systemctl enable mariadb.service systemctl start mariadb.service ​ 1). 数据库安全初始化，这里我们不设置密码
+​ mysql_secure_installation
+​ 2).进入数据库进行设置，输入mysql进入数据库
+ mysql&amp;gt; create database zabbix character set utf8 collate utf8_bin; mysql&amp;gt; grant all on zabbix.* to zabbix@localhost identified	by &#39;123456&#39;; mysql&amp;gt; flush privileges; ​ 3).查询zabbix导入sql的目录
+ rpm -ql zabbix-server-mysql cd /usr/share/doc/zabbix-server-mysql-4.</description>
+    </item>
+    
+    <item>
       <title>如何使用hugo搭建一个个人博客？</title>
       <link>https://troub1emaker0911.github.io/2020/05/17/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Sun, 17 May 2020 19:02:00 +0800</pubDate>
@@ -89,229 +108,6 @@ $ cd /usr/local/hugo/site $ cd themes $ git clone https://github.com/enten/hyde-
 1)切换目录
 cd /usr/local/hugo/site 2)修改配置文件config.toml
 [root@gavin site]# more config.toml # hostname (and path) to the root eg. http://spf13.com/ baseurl = &amp;quot;https://troub1emaker0911.github.io&amp;quot; # Site title title = &amp;quot;Gavin Stone&#39;s Blog&amp;quot; # Copyright copyright = &amp;quot;(c) 2020 Gavin Stone.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://troub1emaker0911.github.io/1/01/01/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <author>xialiaoliao0911@gmail.com (Gavin Stone)</author>
-      <guid>https://troub1emaker0911.github.io/1/01/01/</guid>
-      <description>&lt;h3 id=&#34;一安装zabbix&#34;&gt;一、安装Zabbix&lt;/h3&gt;
-&lt;h4 id=&#34;a安装什么版本&#34;&gt;a.安装什么版本&lt;/h4&gt;
-&lt;p&gt;标准版
-长期支持版： LTS&lt;/p&gt;
-&lt;h4 id=&#34;bzabbix的安装&#34;&gt;b.zabbix的安装&lt;/h4&gt;
-&lt;p&gt;​    1.安装repo源&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;rpm -ivh https://mirrors.tuna.tsinghua.edu.cn/zabbix/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-2.el7.noarch.rpm
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;​    2.修改repo中的源为清华源后保存
-​    将repo.zabbix.com修改为mirrors.tuna.tsinghua.edu.cn/zabbix&lt;/p&gt;
-&lt;p&gt;​    3.安装zabbix-server-mysql和zabbix-web-mysql&lt;/p&gt;
-&lt;p&gt;​    &lt;code&gt;yum -y install zabbix-server-mysql zabbix-web-mysql&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;​    4.安装配置数据库mariadb-server,导入初始数据&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;yum -y install mariadb-server.x86_64
-systemctl enable mariadb.service
-systemctl start mariadb.service
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;​            1). 数据库安全初始化，这里我们不设置密码&lt;/p&gt;
-&lt;p&gt;​             &lt;code&gt;mysql_secure_installation&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;​             2).进入数据库进行设置，输入mysql进入数据库&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;   mysql&amp;gt; create database zabbix character set utf8 collate utf8_bin;
-   mysql&amp;gt; grant all on zabbix.* to zabbix@localhost identified	by &#39;123456&#39;;
-   mysql&amp;gt; flush privileges;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;​              3).查询zabbix导入sql的目录&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;   rpm -ql zabbix-server-mysql
-   cd /usr/share/doc/zabbix-server-mysql-4.0.21/
-   gzip -d create.sql.gz
-   mysql -uzabbix -p123456 zabbix &amp;lt; create.sql
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;​     5.修改zabbix-server配置文件&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;vim /etc/zabbix/zabbix_server.conf
-DBHost=localhost
-DBName=zabbix
-DBUser=zabbix
-DBPassword=123456
-
-systemctl enable zabbix-server.service
-systemctl start zabbix-server.service
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;​    6.修改zabbix-web配置文件&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;systemctl enable httpd
-systemctl start httpd
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;​    7.修改时区&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;vim /etc/httpd/conf.d/zabbix.conf
-php_value date.timezone Asia/Shanghai
-systemctl restart httpd
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;​    8.Zabbix访问地址&lt;/p&gt;
-&lt;p&gt;​    访问地址：192.168.2.200/zabbix
-​    默认用户名和密码  Admin/zabbix&lt;/p&gt;
-&lt;p&gt;​    注：安装完成后的配置文件为&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Configuration file &amp;quot;/etc/zabbix/web/zabbix.conf.php&amp;quot; created.
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;二添加监控主机&#34;&gt;二、添加监控主机&lt;/h3&gt;
-&lt;p&gt;1.在Zabbix-Server主机上安装zabbix-agent&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;yum -y install zabbix-agent.x86_64
-systemctl enable zabbix-agent.service
-systemctl start zabbix-agent.service
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2.其他主机安装zabbix-agent&lt;/p&gt;
-&lt;p&gt;1）直接清华源上下载zabbix-agent&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;wget https://mirrors.tuna.tsinghua.edu.cn/zabbix/zabbix/4.0/rhel/7/x86_64/zabbix-agent-4.0.21-2.el7.x86_64.rpm
-rpm -ivh zabbix-agent-4.0.21-2.el7.x86_64.rpm
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2)修改Server主机为Zabbix-Server的IP地址&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;vim /etc/zabbix/zabbix_agentd.conf
-   Server=192.168.2.200
-
-systemctl enable zabbix-agent.service
-systemctl start zabbix-agent.service
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3.添加主机&lt;/p&gt;
-&lt;p&gt;点击“配置”&amp;gt;“主机”&amp;gt;“创建主机”&lt;/p&gt;
-&lt;p&gt;![image-20200602201832335](/Users/sakura/Library/Application Support/typora-user-images/image-20200602201832335.png)&lt;/p&gt;
-&lt;p&gt;填写zabbix-agent地址，并选择“模板”后，点击“更新”&lt;/p&gt;
-&lt;p&gt;![image-20200602202236914](/Users/sakura/Library/Application Support/typora-user-images/image-20200602202236914.png)&lt;/p&gt;
-&lt;p&gt;选择“模板”&lt;/p&gt;
-&lt;p&gt;![image-20200602202309169](/Users/sakura/Library/Application Support/typora-user-images/image-20200602202309169.png)&lt;/p&gt;
-&lt;p&gt;![image-20200602202516341](/Users/sakura/Library/Application Support/typora-user-images/image-20200602202516341.png)&lt;/p&gt;
-&lt;h3 id=&#34;三添加触发器&#34;&gt;三、添加触发器&lt;/h3&gt;
-&lt;p&gt;主机创建完成后，点击“触发器”按钮，再点击“创建触发器”：&lt;/p&gt;
-&lt;p&gt;![image-20200602202632686](/Users/sakura/Library/Application Support/typora-user-images/image-20200602202632686.png)&lt;/p&gt;
-&lt;p&gt;按照图中的要求填写，这里设置用户数大于3就报警，填写完成后，点击“更新”按钮&lt;/p&gt;
-&lt;p&gt;表达式为：&lt;/p&gt;
-&lt;p&gt;{192.168.2.100:system.users.num.last()}&amp;gt;3&lt;/p&gt;
-&lt;p&gt;![image-20200602202811670](/Users/sakura/Library/Application Support/typora-user-images/image-20200602202811670.png)&lt;/p&gt;
-&lt;h3 id=&#34;四自定义监控项&#34;&gt;四、自定义监控项&lt;/h3&gt;
-&lt;p&gt;说明：这里以主机登录数为例。&lt;/p&gt;
-&lt;p&gt;1.在zabbix-agent端,找到UserParameter参数&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;vim /etc/zabbix/zabbix_agentd.conf
-    UserParameter=login_users,who|wc -l
-    
-systemctl restart zabbix-agent.service
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;2.在zabbix-server安装测试取值工具&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;yum -y install zabbix-get.x86_64 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;3.在zabbix-server上测试取值&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;zabbix_get -s 192.168.2.100 -k login_users
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;其中192.168.2.100为zabbix-agent的IP地址，login_users为刚才设置的用户参数&lt;/p&gt;
-&lt;p&gt;4.回到Zabbix浏览器页面，新建监控项
-键值： login_users&lt;/p&gt;
-&lt;p&gt;![image-20200602203251282](/Users/sakura/Library/Application Support/typora-user-images/image-20200602203251282.png)&lt;/p&gt;
-&lt;p&gt;5.新建触发器
-名称：当前系统登录用户数
-表达式： {192.168.2.100:login_users.last()}&amp;gt;3&lt;/p&gt;
-&lt;p&gt;![image-20200602203352993](/Users/sakura/Library/Application Support/typora-user-images/image-20200602203352993.png)&lt;/p&gt;
-&lt;p&gt;6.添加发件人信息&lt;/p&gt;
-&lt;p&gt;选择“管理”&amp;gt;“报警媒介类型”&amp;gt;“Email”&lt;/p&gt;
-&lt;p&gt;![image-20200602203522632](/Users/sakura/Library/Application Support/typora-user-images/image-20200602203522632.png)&lt;/p&gt;
-&lt;p&gt;填写相关信息后，保存&lt;/p&gt;
-&lt;p&gt;![image-20200602203634274](/Users/sakura/Library/Application Support/typora-user-images/image-20200602203634274.png)&lt;/p&gt;
-&lt;p&gt;注意：这里的密码输入授权码。&lt;/p&gt;
-&lt;p&gt;7.点击右上角头像，选择“报警媒介”，填写收件人&lt;/p&gt;
-&lt;p&gt;![image-20200602203807669](/Users/sakura/Library/Application Support/typora-user-images/image-20200602203807669.png)&lt;/p&gt;
-&lt;p&gt;8.点击“配置”&amp;gt;&amp;quot;动作&amp;rdquo;，将其中的一条动作变为启用。&lt;/p&gt;
-&lt;p&gt;![image-20200602203902854](/Users/sakura/Library/Application Support/typora-user-images/image-20200602203902854.png)&lt;/p&gt;
-&lt;ol start=&#34;9&#34;&gt;
-&lt;li&gt;
-&lt;p&gt;此时我们在zabbix_agent新开3个窗口，使登录数大于3. 看是否能触发报警。&lt;/p&gt;
-&lt;p&gt;![image-20200602204124581](/Users/sakura/Library/Application Support/typora-user-images/image-20200602204124581.png)&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;注意：如果发送邮件的状态一直处于启用中，这时可以重启下zabbix-server。如果不行，可能要重启下服务端机器。&lt;/p&gt;
-&lt;h3 id=&#34;五自定义报警&#34;&gt;五、自定义报警&lt;/h3&gt;
-&lt;h4 id=&#34;1自定义报警信息&#34;&gt;1.自定义报警信息&lt;/h4&gt;
-&lt;ul&gt;
-&lt;li&gt;【邮件报警】&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;原始报警信息：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Problem started at {EVENT.TIME} on {EVENT.DATE}
-Problem name: {EVENT.NAME}
-Host: {HOST.NAME}
-Severity: {EVENT.SEVERITY}
-
-Original problem ID: {EVENT.ID}
-{TRIGGER.URL}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;原始恢复操作内容：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Problem has been resolved at {EVENT.RECOVERY.TIME} on {EVENT.RECOVERY.DATE}
-Problem name: {EVENT.NAME}
-Host: {HOST.NAME}
-Severity: {EVENT.SEVERITY}
-
-Original problem ID: {EVENT.ID}
-{TRIGGER.URL}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;选择“配置”&amp;gt;“动作”&amp;gt;“操作”来自定义报警信息&lt;/p&gt;
-&lt;p&gt;![image-20200602204551786](/Users/sakura/Library/Application Support/typora-user-images/image-20200602204551786.png)&lt;/p&gt;
-&lt;p&gt;在消息内容中输入如下信息：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;服务器:{HOST.NAME}发生：{TRIGGER.NAME}故障！
-{
-  告警主机：{HOST.NAME}
-  告警地址：{HOST.IP}
-  监控项目：{ITEM.NAME}
-  监控取值：{ITEM.LASTVALUE}
-  告警等级：{TRIGGER.SEVERITY}
-  当前状态：{TRIGGER.STATUS}
-  告警信息：{TRIGGER.NAME}
-  告警时间：{EVENT.DATE} {EVENT.TIME}
-  事件ID：{EVENT.ID}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;在“恢复操作”选项卡的消息内容中输入如下内容：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;服务器:{HOST.NAME}恢复：{TRIGGER.NAME}正常！
-{
-  告警主机：{HOST.NAME}
-  告警地址：{HOST.IP}
-  监控项目：{ITEM.NAME}
-  监控取值：{ITEM.LASTVALUE}
-  告警等级：{TRIGGER.SEVERITY}
-  当前状态：{TRIGGER.STATUS}
-  告警信息：{TRIGGER.NAME}
-  告警时间：{EVENT.DATE} {EVENT.TIME}
-  事件ID：{EVENT.ID}
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;相关参数内容可参考：&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.zabbix.com/documentation/4.0/zh/manual/appendix/macros/supported_by_location&#34;&gt;https://www.zabbix.com/documentation/4.0/zh/manual/appendix/macros/supported_by_location&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;【企业微信报警】&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;​    1）注册企业微信&lt;/p&gt;
-&lt;p&gt;选择“应用管理” 来“创建应用”。&lt;/p&gt;
-&lt;p&gt;![image-20200602213216696](/Users/sakura/Library/Application Support/typora-user-images/image-20200602213216696.png)&lt;/p&gt;
-&lt;p&gt;输入一个名称，上传一个logo后来“创建应用”。&lt;/p&gt;
-&lt;p&gt;![image-20200602213320582](/Users/sakura/Library/Application Support/typora-user-images/image-20200602213320582.png)&lt;/p&gt;
-&lt;p&gt;创建一个“ZABBIX”应用。这里我们记录下AgentId,Secret&lt;/p&gt;
-&lt;p&gt;AgentId 1000002&lt;/p&gt;
-&lt;p&gt;Secret 9Y1CQZVIlaATfu6MuDEpfajal9B_bdSLzcfRrdAJ7BI&lt;/p&gt;
-&lt;p&gt;![image-20200602213438705](/Users/sakura/Library/Application Support/typora-user-images/image-20200602213438705.png)&lt;/p&gt;
-&lt;p&gt;2）接下来我们需要到zabbix-server端配置脚本&lt;/p&gt;
-&lt;p&gt;通过如下命令查看脚本位置为/usr/lib/zabbix/alertscripts。一会脚本需要放到这个目录下。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;[root@master alertscripts]# grep -Ev &#39;^$|#&#39; /etc/zabbix/zabbix_server.conf 
-LogFile=/var/log/zabbix/zabbix_server.log
-LogFileSize=0
-PidFile=/var/run/zabbix/zabbix_server.pid
-SocketDir=/var/run/zabbix
-DBHost=localhost
-DBName=zabbix
-DBUser=zabbix
-DBPassword=123456
-SNMPTrapperFile=/var/log/snmptrap/snmptrap.log
-Timeout=4
-AlertScriptsPath=/usr/lib/zabbix/alertscripts
-ExternalScripts=/usr/lib/zabbix/externalscripts
-LogSlowQueries=3000
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;说明：我们配置微信脚本，首先需要调用微信接口。&lt;/p&gt;
-&lt;p&gt;调用微信接口需要一个调用接口的凭证：access_token&lt;/p&gt;
-&lt;p&gt;通过corpid和corpsecret才能调用到。&lt;/p&gt;
-&lt;p&gt;其中torpid可以从企业微信的“我的企业”中获取。即企业ID：&lt;/p&gt;
-&lt;p&gt;![image-20200602214354660](/Users/sakura/Library/Application Support/typora-user-images/image-20200602214354660.png)&lt;/p&gt;
-&lt;p&gt;corpid：  wwa966b90e5a09ba83&lt;/p&gt;
-&lt;p&gt;corpsecret为1）中的Secret。&lt;/p&gt;
-&lt;p&gt;微信企业号接口调试工具地址：http://qydev.weixin.qq.com/debug&lt;/p&gt;
-&lt;p&gt;![image-20200602214519947](/Users/sakura/Library/Application Support/typora-user-images/image-20200602214519947.png)&lt;/p&gt;
-&lt;p&gt;3）上传脚本weixin.py到zabbix-server的/usr/lib/zabbix/alertscripts目录下&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; * 安装脚本依赖项目
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;mkdir -p /root/software
-cd /root/software/python
-wget https://pypi.python.org/packages/f0/07/26b519e6ebb03c2a74989f7571e6ae6b82e9d7d81b8de6fcdbfc643c7b58/simplejson-3.8.2.tar.gz
-tar -zxvf simplejson-3.8.2.tar.gz
-cd /root/software/python/simplejson-3.8.2
-python setup.py build
-python setup.py install
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt; * 上传脚本
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;![image-20200602214748882](/Users/sakura/Library/Application Support/typora-user-images/image-20200602214748882.png)&lt;/p&gt;
-&lt;p&gt;脚本内容如下：&lt;/p&gt;</description>
     </item>
     
   </channel>
