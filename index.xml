@@ -74,9 +74,9 @@ join
  Markdown教程 https://www.runoob.com/markdown/md-block.html 廖雪峰 https://www.liaoxuefeng.com/ Hugo-handbook https://jimmysong.io/hugo-handbook/   [云原生Cloud Native]
  Kubernetes Handbook https://jimmysong.io/kubernetes-handbook/ Istio Handbook https://www.servicemesher.com/istio-handbook/ Kubernetes中文社区 http://docs.kubernetes.org.cn/ 云原生社区 https://cloudnative.to/   [分布式存储]
  GlusterFS分布式存储 https://www.cnblogs.com/huangyanqi/p/8406534.html   [网络与安全]
- iptables防火墙原理 http://www.zsythink.net/archives/1199   [数据库] mysqlrouter读写分离 https://blog.csdn.net/wzy0623/article/details/81103469
- [监控系统] zabbix监控系统 https://blog.csdn.net/thanlon/category_9552649.html
- [日志收集]</description>
+ iptables防火墙原理 http://www.zsythink.net/archives/1199   [数据库]
+ mysqlrouter读写分离 https://blog.csdn.net/wzy0623/article/details/81103469   [监控系统]
+ zabbix监控系统 https://blog.csdn.net/thanlon/category_9552649.html   [日志收集]</description>
     </item>
     
     <item>
